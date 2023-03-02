@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import './style.css'
 
+const main ={
+ 
+  background: 'gray'
+}
+
+const heading = {
+  color: 'red',
+  fontSize:'60px'
+}
+
 function ToDo() {
   const [list, setList] = useState([]);
   const [input, setInput] = useState("");
@@ -21,8 +31,8 @@ function ToDo() {
   };
 
   return (
-    <div className="main">
-      <h2 className="heading">ToDo List</h2>
+    <div className="main" style={main}>
+      <h2 className="heading" style={heading}>ToDo List</h2>
       <input
         className="input"
         type={"text"}
