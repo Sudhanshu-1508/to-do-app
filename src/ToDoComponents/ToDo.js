@@ -1,31 +1,43 @@
 import React, { useState } from "react";
-
+import './style.css'
 
 function ToDo() {
   const [list, setList] = useState([]);
   const [input, setInput] = useState("");
 
+  // How to add new item to the list
   const addToDo = (todo) => {
     const newToDo = {
-      id: Math.random(),
-      todo: todo,
+        id:Math.random(),
+      todo: todo
     };
-    // How to add new item to the list
-    setList([...list, newToDo]);
+    console.log(todo);
 
+    const x = setList([...list, newToDo]);
+    console.log(x);
     //how to clear inputbox after each input
-    setInput("");
+    const y = setInput("");
+    console.log(y);
   };
 
   return (
-    <div>
-      <h2>ToDo List</h2>
+    <div className="main">
+      <h2 className="heading">ToDo List</h2>
       <input
+        className="input"
         type={"text"}
         value={input}
         onChange={(e) => setInput(e.target.value)}
       ></input>
       <button onClick={() => addToDo(input)}>Add</button>
+      <ul>
+        {list.map((todo) =>(
+            <li key={todo.id}>
+            {todo.todo}
+            <input type={"checkbox"} onClick ={()=>{}}></input>
+            </li>
+        ))}
+      </ul>
     </div>
   );
 }
