@@ -1,34 +1,13 @@
 import React, { useState } from "react";
 import './style.css'
-//
-//const main ={
-//  background: 'gray',
-//  color:'white',
-//}
-//
-const heading = {
-  margin: 'auto',
-  color: 'white',
-  fontSize:'50px',
-  alignItems:'center'
-}
 
-const input1 = {
-  alignItems:'center',
-  background:'powderblue',
-  width:'60%'
-}
-const button1 = {
-    paddingHorizontal: '8',
-    paddingVertical: '6',
-    borderRadius: '4',
-    backgroundColor: 'oldlace',
-    minWidth: '8%',
-}
-
-const chkbox ={
-  height:'auto',
-  borderRadius:'4'
+function Validate(input){
+  if(input ===''){
+    alert("input cannot be empty")
+    return false
+  } else{
+    return true
+  }
 }
 
 function ToDo() {
@@ -65,23 +44,26 @@ function ToDo() {
 
   return (
     <div className="main" >
-      <h1 className="heading" style={heading}>ToDo List</h1>
-      <input       
+      <h1 className="heading" >ToDo List</h1>
+      <input 
         className="input"
-        style={input1}
+        placeholder="Enter task"
         type={"text"}
         value={input}
         onChange={(e) => setInput(e.target.value)}
       ></input>
       
-      <button style={button1} onClick={() => addToDo(input)}>Add</button>      
+      <button  className="bttn" onClick={() => {Validate(input); addToDo(input)}}>Add</button>      
 
-      <ul>
-        <ol type="1">
+      <ul  className="list">
+        <ol type="1" className="list">
         {list.map((todo) => (
           <li
             key={todo.id}
-            style={{ textDecoration: todo.status ? 'line-through' : 'none' }}
+            style={{ fontSize: '25px',
+                    fontFamily: 'sans-serif',
+                    color:'black',
+              textDecoration: todo.status ? 'line-through' : 'none' }}
           >
             <label>
               <input

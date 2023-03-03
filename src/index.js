@@ -4,18 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const styleApp = {
-  display: 'flex',
-  height: '100vh',
-  width: '100%',
-  background: 'gray',
-  color:'white',
-}
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App style={styleApp} />
+    <App />
   </React.StrictMode>
 );
 

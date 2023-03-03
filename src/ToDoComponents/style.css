@@ -1,6 +1,48 @@
+:root{
+    height: 100vh;
+}
 .main{
-    background-color: aqua;
+    height: 100vh;
+    background-color: #333;
 }
 .heading{
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
     text-align: center;
+    font-size: 50px;
+}
+
+.chkbox{
+    height: auto;
+    width: auto;
+}
+
+.input{
+    font-size: large;
+    margin-left: 100px;
+    height: 8vh;
+    border-radius: 25px;
+    background-color: rgb(14, 15, 15);
+    width: 70%;
+    font-style: inherit;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.bttn{
+    margin-left: 10px;
+    font-size: large;
+    width: 15%;
+    height: 8vh;
+    border-radius: 25px;
+}
+
+.bttn:hover{
+    background-color: #8f8d8d; 
+    color: #0b0a0a;   
+}
+
+.list{
+    text-align: left;
+    font-size: large;
 }
