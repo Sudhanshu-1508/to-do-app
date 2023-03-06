@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+
+:root{
+    height: 100vh;
+}
+.main{
+    height: 100vh;
+    background-color: #333;
+}
+.heading{
+    font-family: 'Gloock', serif;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 50px;
+}
+
+.chkbox{
+    width: 100px;
+    height: 100px;
+    padding:100px;
+    height: auto;
+    width: auto;
+}
+
+.input{
+    font-size: 25px;
+    margin-left: 100px;
+    height: 8vh;
+    border-radius: 25px;
+    background-color: rgb(14, 15, 15);
+    width: 70%;
+    font-style: inherit;
+    color: antiquewhite;
+    text-align: center;
+}
+
+.bttn{
+    margin-left: 10px;
+    font-size: 25px;
+    background-color: rgb(14, 15, 15);
+    color: antiquewhite;
+    width: 15%;
+    height: 8vh;
+    border-radius: 25px;
+}
+
+.bttn:hover{
+    background-color: #dfd9d9; 
+    color: #0b0a0a;   
+}
+
+.list{
+    margin-top: 50px;
+    margin-left: 40px;
+    text-align: left;
+    font-size: large;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
